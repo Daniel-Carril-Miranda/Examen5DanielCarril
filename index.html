@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Tema 5</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+ <header class="hero-container">
+    <div class="hero-body">
+        <h1>Asturian Natural Trails</h1>
+        <span>Las mejores rutas de montaña para hacer senderismo</span>
+    </div>
+</header>
+ 
+ <section class="main">
+    <h2>Contáctanos</h2>
+    <form action="/templates/envio.html" class="formulario" id="formulario" class="formulario" method="get">
+        <input type="text"class="nombre" id="nombre" name="nombre" placeholder="Nombre">
+
+        <input type="text"class="correo" id="correo" name="correo" placeholder="Correo electrónico">
+
+        <span>Solicitud de información adicional</span>
+        <input type="radio" name="solicitud" id="solicitud-1" checked>
+        <span>Reserva de ruta</span>
+        <input type="radio" name="solicitud" id="solicitud-2">
+        <button id="info" class="info">Info</button>
+
+        <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Por favor, inserta un mensaje"></textarea>
+
+        <input type="submit" id="enviar">
+
+        <ul class="errores" id="errores">
+        </ul>
+
+    </form>
+ </section>
+ <script src="/scripts/main.js"></script>
+</body>
+</html>
