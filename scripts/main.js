@@ -1,6 +1,6 @@
 /**
  * @author Daniel Carril Miranda (DAw Student)
- * @github 
+ * @github https://github.com/Daniel-Carril-Miranda/Examen5DanielCarril.git
  */
 
 const id = (id) => {return document.getElementById(id)}
