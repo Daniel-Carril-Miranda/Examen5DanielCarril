@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'agbalumo';
+    src: url("/assets/fonts/Agbalumo-Regular.ttf") format("truetype");
+}
+
+*, 
+::before, 
+::after{
+    margin: 0;
+    color: white;
+}
+
+:root{
+    --h1-font-size: 5em;
+    --span-font-size: 1.25em;
+    --span-text-align: center;
+    --span-font-family: 'agbalumo';
+    --h1-font-family: 'agbalumo';
+}
+
+@media screen and (max-width: 800px) {
+    :root{
+        --h1-font-size: 2em;
+        --span-font-size: 1em;
+        --span-text-align: center;
+        --span-font-family: 'agbalumo';
+        --h1-font-family: 'agbalumo';
+    }
+}
+
+@media screen and (max-width: 280px) {
+    :root{
+        --h1-font-size: 1em;
+        --span-font-size: 0.5em;
+        --span-text-align: center;
+        --span-font-family: 'agbalumo';
+        --h1-font-family: 'agbalumo';
+    }
+}
+
+
+.hero-container{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('/assets/img/fondoPop.jpg') center/cover;
+    clip-path: ellipse();
+    position: relative;
+    &::before{
+        content: "";
+        position: absolute;
+        background-color: rgb(176, 174, 174);
+        opacity: 0.3;
+    }
+}
+.hero-body{
+    position: relative;
+    width: 100%;
+    height: 10em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &::before{
+        content: "";
+        background: whitesmoke;
+        height: 100dvh;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+    }
+}
+
+body {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: darkslategrey;
+
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.formulario{
+    display: flex;
+    flex-direction: column; 
+    border: 1px solid black;
+    width: 75%;
+    margin:5% 25%;
+    padding: 1%;
+    background-color: black;
+    border-radius: 5px;
+    box-shadow: 5% rgb(174, 169, 169);
+}
+h1{
+    font-size: var(--h1-font-size);
+    font-family: var(--h1-font-family);
+}
+h2{
+    font-size: 3em;
+}
+span {
+    font-size: var(--span-font-size);
+    text-align: var(--span-text-align);
+    font-family: var(--span-font-family);
+    
+}
+
+input, textarea{
+    padding: 2%;
+    margin: 2%;
+    background-color: rgb(174, 169, 169);
+    border-radius: 5px;
+}
+button, input[type="submit"]{
+    background-color: rgb(23, 77, 77);
+    width: 25%;
+    margin: auto;
+    border-radius: 5px;
+    padding: 2.5%;
+    cursor: pointer;
+}
+
+li{
+    color: red;
+    text-align: center;
+    list-style-type: none;
+    &::before{
+        content: "⚠️";
+    }
+}
