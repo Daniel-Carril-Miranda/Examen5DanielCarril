@@ -19,14 +19,27 @@
     <h2>Contáctanos</h2>
     <form action="/templates/envio.html" class="formulario" id="formulario" class="formulario" method="get">
         <input type="text"class="nombre" id="nombre" name="nombre" placeholder="Nombre">
-
         <input type="text"class="correo" id="correo" name="correo" placeholder="Correo electrónico">
 
         <span>Solicitud de información adicional</span>
         <input type="radio" name="solicitud" id="solicitud-1" checked>
         <span>Reserva de ruta</span>
         <input type="radio" name="solicitud" id="solicitud-2">
+
         <button id="info" class="info">Info</button>
+
+        <script>
+            const solicitud1 = document.getElementById("solicitud-1");
+            const solicitud2 = document.getElementById("solicitud-2");
+            const infoButton = document.getElementById("info");
+
+            infoButton.addEventListener("click", function() {
+                if (solicitud1.checked) {
+                    alert("¿Tienes alguna duda? Selecciona esta opción para tratar tu consulta con mayor detenimiento.'");
+                } else if(solicitud2.checked) 
+                    alert("El senderismo en Asturias es una actividad apasionante. Selecciona esta opción y te aportaremos las rutas disponibles, horarios... vía email.");
+            });
+        </script>
 
         <textarea name="mensaje" id="mensaje" cols="30" rows="10" placeholder="Por favor, inserta un mensaje"></textarea>
 
@@ -34,7 +47,6 @@
 
         <ul class="errores" id="errores">
         </ul>
-
     </form>
  </section>
  <script src="/scripts/main.js"></script>

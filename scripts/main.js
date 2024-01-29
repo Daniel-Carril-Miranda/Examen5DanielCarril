@@ -30,3 +30,4 @@ const validar = (e) =>{
 }
 
 formulario.addEventListener("submit", validar)
+
